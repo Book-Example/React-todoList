@@ -1,7 +1,9 @@
+import TodoTemplate from "./components/TodoTemplate";
+
 function App() {
   return (
    <div>
-     <h1>Hello, World!</h1>
+     <TodoTemplate>Todo App 만들기</TodoTemplate>
    </div>
   );
 }
