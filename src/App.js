@@ -44,11 +44,21 @@ const App = () => {
     },[todos],
   );
 
+  // 배열 내장함수 map을 사용하고 특정 id를 가지고 있는
+  // 객체의 checked값을 반전시켰습니다. - 284p
+  const onToggle = useCallback(
+    id => {
+      setTodos(
+        todos.map(todo => todo.id === id ? {...todo, checked: !todo.checked} : todo,),
+      );
+    },[todos]
+  );
+
   return (
    <div>
      <TodoTemplate>
      <TodoInsert onInsert={onInsert}/>
-     <TodoList todos={todos} onRemove={onRemove}/>
+     <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle}/>
      </TodoTemplate>
    </div>
   );
