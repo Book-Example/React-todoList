@@ -3,4 +3,5 @@
 ### 초판 7쇄 발행일: 2021년 8월 20일
 
 
-### npm i sass
+### npm install sass
+### npm install react-icons
